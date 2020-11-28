@@ -1,6 +1,8 @@
 import os
 import algoritmo_2048 as regla
 
+
+# L a funcion posicion es la que pone el numero correspodientes en cierta coordenada asignada
 def position(coor, my_font, mysurface, num):
     x1=145
     fac = 7
@@ -21,7 +23,7 @@ def position(coor, my_font, mysurface, num):
     y = 140 + 60*(coor//4)
     mysurface.blit(numero,(x,y))
 
-
+# Comprueba si se puede hacer otro movimiento y el que decide si se puede poner otro 2 en la cuadricula
 def different_pos(ran, my_font, my_surface, my_position):
     if 0 in my_position:
         while(True):
@@ -38,11 +40,12 @@ def different_pos(ran, my_font, my_surface, my_position):
                         return []
         return my_position 
 
+# Llama la funcion position para obtener las coordenadas y poder poner el numero en la cuadricula 
 def put_numbers(my_font, my_surface, my_position):
     for i in range(len(my_position)):
         position(i, my_font, my_surface, my_position[i])
         
-
+# Llamo el archivo instruccciones_2048.py para crear otra ventana, donde se encuentra las instrucciones del juego
 def ventana2():
     os.system("python3 instruccciones_2048.py")
     
