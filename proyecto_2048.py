@@ -25,7 +25,7 @@ def main():
     over = pygame.image.load("game_over.png")
      
     #Edicion de texto
-    my_font = pygame.font.SysFont("Courier",16)
+    my_font = pygame.font.SysFont("Courier",20)
     
     #Ajustar el tamano de las imagenes
     control = pygame.transform.scale(control,(50,50))
@@ -123,42 +123,3 @@ def main():
         
 main()
 
-
-
-
-
-
-##################################################
-##################################################
-#Instrucciones -¿como jugar?
-##################################################
-##################################################
-#El objetivo del juego es combinar números juntos (potencias de 2) con el fin 
-#de alcanzar el máximo de baldosas '2048 'y ganar el juego!
-
-#El área de juego 2048 es una cuadrícula de 4x4 con 16 ranuras cuadradas. 
-#Al principio del juego, tiene dos plazas (también llamados «tejas») con un 'número '2 interior.
-
-#Cuando usted hace 2 baldosas con el mismo número en el interior se unen,
-#se funden en uno nuevo  con un número que es la adición de la 2 anterior : 2 +2 = 4,
-# 4 +4 = 8, 1024 ... 1024 = 2048 !
-
-#Para mover las fichas en la parrilla, sólo tienes que elegir una 
-#dirección  (arriba, derecha, abajo o izquierda) .
-# Todas las fichas se mueven en la dirección elegida, hasta que se funden
-# con una baldosa que tiene el mismo número o son bloqueados por una baldosa con un número diferente.
-
-#En un equipo, sólo tiene que  utilizar las flechas del teclado 4 .
-# En un dispositivo móvil con interfaz táctil (como un dispositivo iOS o Android) , 
-#deslizar con el dedo en la dirección deseada.
-
-
-###################################################
-###################################################
-# numero de las flechas
-###################################################
-###################################################
-# arriba - 1073741906
-# abajo - 1073741905
-# izquierda - 1073741904
-# derecha - 1073741903

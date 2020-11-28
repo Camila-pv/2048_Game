@@ -2,12 +2,22 @@ import os
 import algoritmo_2048 as regla
 
 def position(coor, my_font, mysurface, num):
+    x1=145
+    fac = 7
     if num != 0:        
         numero = my_font.render(str(num),True,(0,0,0))
+        if num < 10:
+            x1 = 145
+        elif num < 100:
+            x1 = 145-fac
+        elif num < 1000:
+            x1 = 145 - fac*2
+        else:
+            x1 = 145 - fac*3
     else:
         numero = my_font.render("   ",True,(0,0,0))
         
-    x = 145 + 60*(coor%4)
+    x = x1 + 60*(coor%4)
     y = 140 + 60*(coor//4)
     mysurface.blit(numero,(x,y))
 
