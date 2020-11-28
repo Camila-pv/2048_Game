@@ -137,7 +137,17 @@ def algoritmo(lista,w,x,y,z):
             lista[y] = c
             lista[x] = 0
             lista[w] = 0 
-            
+        elif lista[v[0]] == lista[v[1]] == lista[v[2]] != lista[v[3]]: 
+            suma = lista[v[1]] + lista[v[2]]
+            lista[y] = suma
+            lista[x] = lista[v[0]]
+            lista[w] = 0
+        elif lista[v[0]] != lista[v[1]] == lista[v[2]] == lista[v[3]]: 
+            suma = lista[v[2]] + lista[v[3]]
+            lista[z] = suma
+            lista[y] = lista[v[1]]
+            lista[x] = lista[v[0]]
+            lista[w] = 0
     
             
     return lista
