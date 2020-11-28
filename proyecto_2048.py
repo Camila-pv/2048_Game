@@ -22,12 +22,12 @@ def main():
     cuatro = pygame.image.load("cuatro.png")
     ocho = pygame.image.load("ocho.png")
     win = pygame.image.load("you_win.png")
-    over = pygame.imge.load("game_over.png")
+    over = pygame.image.load("game_over.png")
      
     #Edicion de texto
     my_font = pygame.font.SysFont("Courier",16)
     
-    #Ajustar el tamaño de las imagenes
+    #Ajustar el tamano de las imagenes
     control = pygame.transform.scale(control,(50,50))
     dos = pygame.transform.scale(dos,(50,50))
     cero = pygame.transform.scale(cero,(50,50))
@@ -57,7 +57,7 @@ def main():
     mysurface.blit(cuatro,(240,30))
     mysurface.blit(ocho,(290,30))    
     
-    #Creo las primeras posiciones aleatorias para poner los primeros dos números inicales
+    #Creo las primeras posiciones aleatorias para poner los primeros dos numeros inicales
     my_position = fun.different_pos(rng, my_font, mysurface, my_position)
     my_position = fun.different_pos(rng, my_font, mysurface, my_position)
             
@@ -73,7 +73,7 @@ def main():
                 if pos[0]>= 399 and pos[0] <=452 and pos[1] >= 115 and pos[1] <= 171: #Oprime imagen del control
                     fun.ventana2()                                                      #llama otra ventana
 
-        #Creo un cuadrado del tamaño de la cuadricula grande         
+        #Creo un cuadrado del tamano de la cuadricula grande         
         pygame.draw.polygon(mysurface,(204,204,255),[(120,120),(120,360),(360,360),(360,120)])        
         
         #line(surface, color, start_pos, end_pos, width=1) -> Rect
@@ -85,7 +85,7 @@ def main():
             a+=60
         
         
-        # Imprimos los números en la cuadricula
+        # Imprimos los numeros en la cuadricula
         fun.put_numbers(my_font, mysurface, my_position)
         
         
