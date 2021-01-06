@@ -45,7 +45,7 @@ def partir_lista(my_position,vertical,adelante):
     else:
         lista_total = lista1 + lista2 + lista3 +lista4
     
-    return lista_total
+    return lista_total 
             
 
 # La funcion algoritmo es la funcion principal del juego ya que aqui es donde se hace el manojo inicial y final de los turnos en el juego     
@@ -109,50 +109,4 @@ def algoritmo(lista,w,x,y,z):
             lista[x]=lista[v[0]]
             lista[w] = 0 
             
-    #### Caso 4´ , en donde la longitud de v sea 4
-    if len(v) ==4:
-        if lista[v[0]] != lista[v[1]] != lista[v[2]] == lista[v[3]]: 
-            conte= lista[v[2]] + lista[v[3]] 
-            lista[z] = conte
-            lista[y] = lista[v[1]] 
-            lista[x] =lista[v[0]]
-            lista[w] = 0 
-        elif lista[v[0]] != lista[v[1]] == lista[v[2]] != lista[v[3]]:
-            cont = lista[v[1]] + lista[v[2]]
-            lista[y] = cont
-            lista[x] = lista[v[0]] 
-            lista[w] = 0
-        elif lista[v[0]] == lista[v[1]] != lista[v[2]] != lista[v[3]]:
-            con = lista[v[0]] + lista[v[1]]
-            lista[x] = con 
-            lista[w] = 0
-        elif lista[v[0]] == lista[v[1]] != lista[v[2]] == lista[v[3]]:
-            co = lista[v[2]] + lista[v[3]]
-            lista[z] = co
-            c = lista[v[0]] + lista[v[1]]
-            lista[y] = c
-            lista[x] = 0
-            lista[w] = 0 
-        elif lista[v[0]] == lista[v[1]] == lista[v[2]] == lista[v[3]]: 
-            co = lista[v[2]] + lista[v[3]]
-            lista[z] = co
-            c = lista[v[0]] + lista[v[1]]
-            lista[y] = c
-            lista[x] = 0
-            lista[w] = 0 
-        elif lista[v[0]] == lista[v[1]] == lista[v[2]] != lista[v[3]]: 
-            suma = lista[v[1]] + lista[v[2]]
-            lista[y] = suma
-            lista[x] = lista[v[0]]
-            lista[w] = 0
-        elif lista[v[0]] != lista[v[1]] == lista[v[2]] == lista[v[3]]: 
-            suma = lista[v[2]] + lista[v[3]]
-            lista[z] = suma
-            lista[y] = lista[v[1]]
-            lista[x] = lista[v[0]]
-            lista[w] = 0
-    
-            
-    return lista
-
-
+   
