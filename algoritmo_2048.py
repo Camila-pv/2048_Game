@@ -109,4 +109,50 @@ def algoritmo(lista,w,x,y,z):
             lista[x]=lista[v[0]]
             lista[w] = 0 
             
-   
+    #### Caso 4´ , en donde la longitud de v sea 4
+    if len(v) ==4:
+        if lista[v[0]] != lista[v[1]] != lista[v[2]] == lista[v[3]]: 
+            conte= lista[v[2]] + lista[v[3]] 
+            lista[z] = conte
+            lista[y] = lista[v[1]] 
+            lista[x] =lista[v[0]]
+            lista[w] = 0 
+        elif lista[v[0]] != lista[v[1]] == lista[v[2]] != lista[v[3]]:
+            cont = lista[v[1]] + lista[v[2]]
+            lista[y] = cont
+            lista[x] = lista[v[0]] 
+            lista[w] = 0
+        elif lista[v[0]] == lista[v[1]] != lista[v[2]] != lista[v[3]]:
+            con = lista[v[0]] + lista[v[1]]
+            lista[x] = con 
+            lista[w] = 0
+        elif lista[v[0]] == lista[v[1]] != lista[v[2]] == lista[v[3]]:
+            co = lista[v[2]] + lista[v[3]]
+            lista[z] = co
+            c = lista[v[0]] + lista[v[1]]
+            lista[y] = c
+            lista[x] = 0
+            lista[w] = 0 
+        elif lista[v[0]] == lista[v[1]] == lista[v[2]] == lista[v[3]]: 
+            co = lista[v[2]] + lista[v[3]]
+            lista[z] = co
+            c = lista[v[0]] + lista[v[1]]
+            lista[y] = c
+            lista[x] = 0
+            lista[w] = 0 
+        elif lista[v[0]] == lista[v[1]] == lista[v[2]] != lista[v[3]]: 
+            suma = lista[v[1]] + lista[v[2]]
+            lista[y] = suma
+            lista[x] = lista[v[0]]
+            lista[w] = 0
+        elif lista[v[0]] != lista[v[1]] == lista[v[2]] == lista[v[3]]: 
+            suma = lista[v[2]] + lista[v[3]]
+            lista[z] = suma
+            lista[y] = lista[v[1]]
+            lista[x] = lista[v[0]]
+            lista[w] = 0
+    
+            
+    return lista
+
+
